@@ -1,0 +1,249 @@
+@charset "utf-8";
+/* font-family: "RexLight"; */
+@font-face {
+    font-family: "RexLight";
+    src: url("fonts/RexLight/RexLight.eot");
+    src: url("fonts/RexLight/RexLight.eot?#iefix")format("embedded-opentype"),
+    url("fonts/RexLight/RexLight.woff") format("woff"),
+    url("fonts/RexLight/RexLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "RexBold"; */
+@font-face {
+    font-family: "RexBold";
+    src: url("fonts/RexBold/RexBold.eot");
+    src: url("fonts/RexBold/RexBold.eot?#iefix")format("embedded-opentype"),
+    url("fonts/RexBold/RexBold.woff") format("woff"),
+    url("fonts/RexBold/RexBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "RexBoldInline"; */
+@font-face {
+    font-family: "RexBoldInline";
+    src: url("fonts/RexBoldInline/RexBoldInline.eot");
+    src: url("fonts/RexBoldInline/RexBoldInline.eot?#iefix")format("embedded-opentype"),
+    url("fonts/RexBoldInline/RexBoldInline.woff") format("woff"),
+    url("fonts/RexBoldInline/RexBoldInline.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+body{
+	background: #111;
+	color: #fff;
+	font-family: "RexLight", serif;
+	font-size: 16px;
+}
+.flex-c{
+display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+	  display: -webkit-flex;
+  	display: flex;
+		flex-flow: row nowrap;
+		-webkit-justify-content: center;
+						justify-content: center;
+  	-webkit-align-items: center;
+  	        align-items: center;
+  }
+.flex-sb{
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+	  display: -webkit-flex;
+  	display: flex;
+		flex-flow: row nowrap;
+		-webkit-justify-content: space-between;
+						justify-content: space-between;
+  	-webkit-align-items: center;
+  	        align-items: center;
+}
+.flex-s{
+	display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+	  display: -webkit-flex;
+  	display: flex;
+		flex-flow: row nowrap;
+		-webkit-justify-content: flex-start;
+						justify-content: flex-start;
+  	-webkit-align-items: center;
+  	        align-items: center;
+}
+.-wrap{
+	flex-flow: row wrap;
+}
+h1{
+	font-family: "RexBold", serif;
+	font-size: 2em;
+}
+h2{
+	font-family: "RexBold", serif;
+	font-size: 1.625em;
+}
+h3{
+	font-family: "RexBold",serif;
+	font-size: 1,375em;
+}
+p{
+	font-family: "RexLight",serif;
+	font-size: 1em;
+	line-height: 1.25em;
+}
+@media all and (min-width: 1024px) {
+/*HEAD*/
+	#top-hed{
+		position: relative;
+		display: block;
+		width: 100%;
+	}
+	#top-hed h1{
+		padding: 5%;
+		font-size: 5em;
+		text-align: center;
+	}
+/*Биография*/
+	.bio{
+		position: relative;
+		margin: 0 auto;
+		height: 200px;
+		width: 26%;
+	}
+	.man{
+		position: relative;
+		display: inline;
+		height: 100%;
+		margin-left: 10px;
+	}
+	#serg img{
+		height: 95%;
+	}
+	#misha img{
+		height: 100%;
+	}
+	#dima img{
+		height: 95%;
+	}
+	#egor img{
+		height: 85%;
+	}
+	.bio-exp{
+		display: none;
+		padding: 20px;
+		height: 30vh;
+		width: 30vw;
+		background: #333;
+		overflow: hidden;
+		z-index: 2;
+	}
+	.bio-exp img{
+		height: 100%;
+		float: left;
+		margin-right: 20px;
+	}
+	#serg:hover~.bio-exp{
+		position: absolute;
+		display: block;
+	}
+	#misha:hover~.bio-exp{
+		position: absolute;
+		display: block;
+	}
+	#misha:hover~.bio-exp img{ /*Грязный фикс, нужно все картинки одинаковой ориентации и ширины*/
+		height: auto;
+		width: 50%;
+	}
+	#dima:hover~.bio-exp{
+		position: absolute;
+		display: block;
+	}
+	#egor:hover~.bio-exp{
+		position: absolute;
+		display: block;
+	}
+	#egor:hover~.bio-exp img{ /*Грязный фикс, нужно все картинки одинаковой ориентации и ширины*/
+		height: auto;
+		width: 50%;
+	}
+/*Конец Биография*/
+/*SIDEBAR*/
+	#sidebar{
+		position: relative;
+		display: block;
+		height: 10vh;
+		width: 100%;
+		background: #000;
+		margin-top: -30px;
+		border-bottom: 4px solid #333;
+	}
+	.logo{
+		height: 100%;
+		margin: 0 5%; 
+		float: left;
+	}
+	.logo img{
+		height: 100%;
+	}
+	#top-menu{
+		position: relative;
+		display: inline-block;
+		margin-right: 5%;
+		height: 100%;
+		float: right;
+	}
+	#top-menu ul{
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+	  display: -webkit-flex;
+  	display: flex;
+		flex-flow: row nowrap;
+		-webkit-justify-content: center;
+						justify-content: center;
+  	-webkit-align-items: center;
+  	        align-items: center;
+		height: 100%;
+	}
+	#top-menu ul li{
+		display: inline;
+		font-size: 1.25em;
+		font-family: "RexBold", serif;
+	}
+	.aNav{
+		box-sizing: border-box;
+		padding: 4.2vh 2%; /*грязный фикс. Возможен фикс через script?*/
+	}
+	.aNav:hover{
+		border-bottom: 4px solid #421766;
+	}
+/*END SIDEBAR*/
+/*END HEAD*/
+/*MUSIC*/
+#music{
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+}
+#music h1{
+	padding: 5%;
+	font-size: 4em;
+	text-align: center;
+}
+.content-album{
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 5% 0;
+	background: #333;
+}
+.alb{
+	width: 20%;
+}
+.alb img{
+	width: 100%;
+}
+/*END MUSIC*/
+}
+
+	
