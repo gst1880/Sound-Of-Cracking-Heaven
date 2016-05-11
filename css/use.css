@@ -92,6 +92,9 @@ p{
 	line-height: 1.25em;
 }
 @media all and (min-width: 1024px) {
+	.container {
+		padding: 0 20vw;
+	}
 /*HEAD*/
 	#top-hed{
 		position: relative;
@@ -135,6 +138,7 @@ p{
 		width: 30vw;
 		background: #333;
 		overflow: hidden;
+		background: #555;
 		z-index: 2;
 	}
 	.bio-exp img{
@@ -193,26 +197,29 @@ p{
 		float: right;
 	}
 	#top-menu ul{
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-	  display: -webkit-flex;
-  	display: flex;
-		flex-flow: row nowrap;
-		-webkit-justify-content: center;
-						justify-content: center;
-  	-webkit-align-items: center;
-  	        align-items: center;
+		position: relative;
+		display: block;
 		height: 100%;
 	}
-	#top-menu ul li{
-		display: inline;
+	.pt-nav{
+		position: absolute;
+		margin: auto;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		height: 1.25em;
 		font-size: 1.25em;
 		font-family: "RexBold", serif;
+		text-align: center;
 	}
 	.aNav{
-		box-sizing: border-box;
-		padding: 4.2vh 2%; /*грязный фикс. Возможен фикс через script?*/
+		position: relative;
+		display: inline-block;
+		margin-left: 10px;
+		height: 100%;
+		min-width: 5em;
+		width: 1px;
 	}
 	.aNav:hover{
 		border-bottom: 4px solid #421766;
@@ -220,30 +227,162 @@ p{
 /*END SIDEBAR*/
 /*END HEAD*/
 /*MUSIC*/
-#music{
-	position: relative;
-	width: 100%;
-	box-sizing: border-box;
-}
-#music h1{
-	padding: 5%;
-	font-size: 4em;
-	text-align: center;
-}
-.content-album{
-	position: relative;
-	width: 100%;
-	box-sizing: border-box;
-	padding: 5% 0;
-	background: #333;
-}
-.alb{
-	width: 20%;
-}
-.alb img{
-	width: 100%;
-}
-/*END MUSIC*/
+	#music{
+		position: relative;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	#music h1{
+		padding: 5%;
+		font-size: 4em;
+		text-align: center;
+	}
+	.content-album{
+		position: relative;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 5% 0;
+		background: #333;
+	}
+	.alb{
+		width: 20%;
+	}
+	.alb img{
+		width: 100%;
+	}
+	/*END MUSIC*/
+	/*TIMELINE*/
+	#timeline{
+		position: relative;
+
+	}
+	#timeline h1{
+		padding: 5%;
+		font-size: 4em;
+		text-align: center;
+	}
+	.time-box{
+		position: relative;
+		background: #333;
+		height: 250px;
+	}
+	.time-line{
+		position: absolute;
+		margin: auto;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 2px;
+		background: yellow;
+	}
+	.kt-box{
+		position: relative;
+		height: 100%;
+	}
+	.kt{
+		position: relative;
+		box-sizing: border-box;
+		margin-left: 4%;
+		padding: 18px;
+		border: 10px solid white;
+	}
+	.kt:hover{
+		border:15px solid #421766;
+	}
+	.kt:hover .history{
+		display: block;
+	}
+	.history{
+		position: absolute;
+		display: none;
+		width: 40vw;
+		padding: 20px;
+		margin: ;
+		background: #555;
+		z-index: 2;
+	}
+	.his-txt {
+		margin-top: 10px;
+		height: 200px;
+	}
+	.his-txt img{
+		height: 100%;
+		float: left;
+		margin-right: 15px;
+	}
+	.his-txt p{
+		display: inline;
+		font-size: 1em;
+	}
+	.history footer{
+		margin-top: 10px;
+		text-align: right;
+	}
+	._2013:before{
+    content: '2013';
+    position: absolute;
+    font-family: "RexBold", serif;
+    font-size: 1.75em;
+    top: -1.5em;
+    left: -0.25em;
+	}
+	._2014:before{
+    content: '2014';
+    position: absolute;
+    font-family: "RexBold", serif;
+    font-size: 1.75em;
+    top: -1.5em;
+    left: -0.25em;
+  }
+   ._2015:before{
+    content: '2015';
+    position: absolute;
+    font-family: "RexBold", serif;
+    font-size: 1.75em;
+    top: -1.5em;
+    left: -0.25em;
+  }
+   ._2016:before{
+    content: '2016';
+    position: absolute;
+    font-family: "RexBold", serif;
+    font-size: 1.75em;
+    top: -1.5em;
+    left: -0.25em;
+  }
+/*END TIMELINE*/
+/*FOOTER*/
+	#contact{
+		position: relative;
+		margin-top: 10%;
+		background: #000;
+		padding: 2% 40%;
+	}
+	.hed-foot{
+		font-size: 1em;
+	}
+	.social_networks{
+		position: relative;
+		display: block;
+		margin-top: 30px;
+	}
+	.seti{
+		display: inline-block;
+		height: 50px;
+		padding: 10px;
+		margin-left: 10px;
+	}
+	.seti:hover{
+		background: #421766;
+	}
+	.seti:first-child {
+		margin-left: 0px;
+	}
+	.seti img{
+		height: 100%;
+	}
+/*END FOOTER*/
 }
 
 	
